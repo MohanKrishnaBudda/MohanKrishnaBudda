@@ -41,7 +41,7 @@ public class ReadJsonModel {
 		    JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
 		    JsonObject rootobj = root.getAsJsonObject(); //May be an array, may be an object. 
 		    property = rootobj.get("ListOfProperties").getAsJsonObject().get("Property").getAsJsonArray().get(0).getAsJsonObject().get("ServiceLocation").getAsJsonObject().get("PropertyType").getAsJsonObject().get("SuperiorPropertyType").getAsJsonObject().get("Description").toString();
-		    LOGGER.debug("propVal is:{}", property);		
+		    LOGGER.debug("property Value is :{}", property);		
 	}
 	
 	public String getProperty() {
